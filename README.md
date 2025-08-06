@@ -75,3 +75,91 @@ Logistic regression is a **supervised learning model**, meaning it learns from *
 We’ll explore both types in the following sections.
 
 ---
+
+## ⚙️ Working of Logistic Regression — and Why It Works
+
+In most machine learning models — including logistic regression — the process involves **training first**, then **testing**, and finally **predicting**. During training, there are **3 core steps**:
+
+---
+
+### 🔹 Step 1: Prepare and Check the Dataset
+
+Start with labeled data — meaning we know both the features and the correct outputs (like "Pass" or "Fail"). This helps the model learn patterns between input and output.
+
+---
+
+### 🔹 Step 2: Compute the Linear Function $z$
+
+We use a **linear combination of weights and inputs**:
+
+$$
+z = w_1x_1 + w_2x_2 + \ldots + w_nx_n + b
+$$
+
+This is written as:
+
+$$
+z = \mathbf{w}^T \cdot \mathbf{x}
+$$
+
+The result of this equation is usually a **very large or small value**, possibly outside the range \[0, 1].
+
+---
+
+### 🔹 Step 3: Apply the Sigmoid Function
+
+To **compress these large values between 0 and 1**, we apply the **sigmoid function**:
+
+$$
+\sigma(z) = \frac{1}{1 + e^{-z}}
+$$
+
+This allows us to interpret the output as a **probability**. You can relate it to how logarithms are used to reduce large values in mathematics — sigmoid does something similar in ML.
+
+---
+
+### 🎯 Making Predictions
+
+We usually apply a **threshold** (commonly 0.5):
+
+* If $\hat{y} < 0.5$ → Predict **Class 0**
+* If $\hat{y} \geq 0.5$ → Predict **Class 1**
+
+This is how the model converts a probability into a final class prediction.
+
+---
+
+### 🎒 But What Are Weights?
+
+**Weights** represent the **importance** of each input feature.
+
+Let’s understand this with a simple example:
+
+> Imagine you're a bank manager. A person comes and says:
+> “Please give me a loan. Here's my name and my salary.”
+>
+> Now — does their **name** help you decide anything? Probably not.
+> But their **salary**? Definitely — higher salary usually means higher loan eligibility.
+>
+> So in this dataset:
+>
+> * **Salary** has high weight (important feature)
+> * **Name** has low or zero weight (not useful)
+
+---
+
+### ❓ Why Not Just Use a Straight Line?
+
+A **linear regression model** (straight line) outputs values from **−∞ to +∞** — which doesn't make sense when you're trying to **classify into categories like 0 or 1**.
+
+For example:
+
+* A person might get predicted value of **2.3** or **−1.7**, but how do we interpret that as a class label?
+
+Also:
+
+* It doesn't map well to **probabilities**, and you can’t define a clean threshold on infinite-range output.
+
+🛠️ That’s why we apply the **sigmoid function** to convert the raw linear output into a **probability between 0 and 1**, making classification **accurate, bounded, and interpretable**.
+
+---
