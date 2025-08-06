@@ -163,3 +163,20 @@ Also:
 🛠️ That’s why we apply the **sigmoid function** to convert the raw linear output into a **probability between 0 and 1**, making classification **accurate, bounded, and interpretable**.
 
 ---
+
+## 📐 Mathematical Intuition
+
+To understand how logistic regression works internally, let’s take a simple dataset and walk through the math involved.
+
+### 📊 Dataset Used:
+
+| ID | Study Hours (x₁) | Sleep Hours (x₂) | Result (y) |
+| -- | ---------------- | ---------------- | ---------- |
+| 1  | 2                | 7                | 0          |
+| 2  | 3                | 6                | 0          |
+| 3  | 4                | 5                | 0          |
+| 4  | 6                | 4                | 1          |
+| 5  | 7                | 3                | 1          |
+| 6  | 8                | 2                | 1          |
+
+---
