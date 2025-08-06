@@ -15,3 +15,15 @@ This project offers a thorough exploration of **Logistic Regression**, guiding l
 * **📐 numpy** – for performing numerical and statistical operations 
 
 ---
+
+## 📁 File Structure 
+
+1. **Introduction to Logistic Regression**
+2. **Working and Why It Works**
+3. **Mathematical Intuition**
+4. **Implementation Without Scikit-Learn**
+5. **Implementation With Scikit-Learn**
+6. **Applications**
+7. **Advantages and Disadvantages**
+
+---
