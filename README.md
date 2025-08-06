@@ -27,3 +27,51 @@ This project offers a thorough exploration of **Logistic Regression**, guiding l
 7. **Advantages and Disadvantages**
 
 ---
+
+## 📘 Introduction to Logistic Regression
+
+**Definition**:
+Logistic Regression is a **supervised machine learning algorithm** used primarily for **classification tasks**. While traditional regression gives outputs ranging from **−∞ to +∞**, logistic regression applies the **sigmoid function** to map these values into the range **0 to 1**, making it suitable for predicting probabilities.
+
+---
+
+### 💡 Why "Regression" in Classification?
+
+Even though the goal is classification, the algorithm initially computes a **continuous value** using a linear equation:
+
+$$
+z = w_1x_1 + w_2x_2 + \ldots + b
+$$
+
+This output `z` is then passed through the **sigmoid function** to squash it into a probability between 0 and 1:
+
+$$
+\hat{y} = \frac{1}{1 + e^{-z}}
+$$
+
+---
+
+### 📚 What is Supervised Learning?
+
+Logistic regression is a **supervised learning model**, meaning it learns from **labeled data** — where both input features and correct output labels are already known.
+
+> 🧠 Example:
+> A dataset containing features like `study_hours`, `sleep_hours`, and the label `verdict` (Pass or Fail). The model learns from this structured data to predict outcomes on unseen inputs.
+
+---
+
+### 🔄 Regression vs. Logistic Regression
+
+* **Linear Regression** is used for predicting **continuous values** (e.g., price, temperature).
+* **Logistic Regression** is used for **classification** by applying a regression-like linear combination and then using **sigmoid** to output probabilities.
+
+---
+
+### 🧭 Types of Logistic Regression
+
+1. **Binary Classification** – Two output classes (e.g., Pass/Fail, Yes/No)
+2. **Multiclass Classification** – More than two output classes (e.g., Low/Medium/High)
+
+We’ll explore both types in the following sections.
+
+---
